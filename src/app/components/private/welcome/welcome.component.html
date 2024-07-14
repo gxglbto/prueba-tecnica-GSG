@@ -1,0 +1,25 @@
+<div class="container-custom">
+
+    <div class="box-title ">
+
+        <h1 class="title">Bienvenido a mi portal</h1>
+        <h4 class="subtitle mt-3">Nos podrías indicar tu nombre</h4>
+        <button  class="btn btn-outline-primary btn-custom mt-3"
+            (click)="callModal()"
+        >Escribe tu nombre</button>
+
+        <h3 *ngIf="this.viewName" class="textInp mt-3">{{ this.textoDeInput | cambioLetras }}</h3>
+    </div>
+</div>
+
+
+<ng-template #customContent>
+
+    <div class="  box-inp">
+        <mat-form-field class="w-100">
+            <mat-label class="w-100">Ingresa tu nombre</mat-label>
+            <input matInput [(ngModel)]='textoDeInput' >
+        </mat-form-field>
+    </div>
+
+</ng-template>

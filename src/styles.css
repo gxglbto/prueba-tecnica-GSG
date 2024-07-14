@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "assets/css/bootstrap.min.css";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: #20298B !important;
+
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-label{
+    color: #20298B;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-label{
+ 
+    /* background-color: #20298B; */
+}
+
+.mat-form-field-wrapper{
+    
+    /* background-color: #20298B30; */
+}
+
+/* bloqueado */
+.bloqueado{
+    /* background-color: #20298B30; */
+    
+}
+
+.mat-form-field-disabled .mat-form-field-flex{
+    
+    background-color: #bfe7f5;
+}

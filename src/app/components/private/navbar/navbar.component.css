@@ -1,0 +1,55 @@
+.navbar-bg{
+    /* background-color: #2465A7; */
+    background: linear-gradient(to right, #2465A7 30%, #CFE3D1);
+
+}
+
+/* sobreescribe la clase de bootstrap */
+.nav-link.active{
+    color: whitesmoke;
+}
+
+a{
+    color: #2EAFAE;
+}
+
+
+.bg-toggle{
+
+    background-color: azure;
+    position: relative;
+}
+.color-toggle{
+    color: #2465A7;
+}
+
+.menu-root{
+    width: 300px;
+    height: 30vh;
+    position: absolute;
+    top: 41px;
+    /* left: 90%; */
+    right: -40%;
+    visibility: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* align-self: center; */
+
+    background: linear-gradient(to bottom, #CFE3D1 5%, #2465A7 );
+}
+
+.ul-content__item-link{
+    color: #FFFFFF
+}
+
+.ul-content__item :hover{
+    background-color: #2465A7;
+}
+
+@media only screen and (min-width: 992px) {
+    .menu-root {
+        visibility: hidden;
+    }
+  }

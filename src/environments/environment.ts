@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  // urlSrv: 'https://desa.ies-webcontent.com.mx/login'
+  urlSrv: 'https://desa.ies-webcontent.com.mx',
+  // urlSrvCatalogo:'http://201.131.20.125/BienesRaicesApi/api/services/app/Catalogo/EstadoCivil',
+  urlSrvCatalogo:'http://201.131.20.125',
 };
 
 /*

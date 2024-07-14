@@ -1,0 +1,27 @@
+.container{
+    height: 90vh;
+}
+
+
+.container-form{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.form{
+    width: 80%;
+}
+
+.form__p{
+    color: #20298B;
+}
+
+.btn-custom{
+    width: 35%;
+    font-size: 18px;
+}

@@ -1,0 +1,58 @@
+<div class="  container-custom">
+    <div class=" container-circle-3">
+        <div class="circle-3"></div>
+    </div>
+    <div class="container-circle-4">
+        <div class="circle-4"></div>
+    </div>
+    <div class="container-form  ">
+        <div class="circle-5 "></div>
+        <div class="container-form__box">
+
+            <h1 class="text-center mt-2">Ingresa al sistema</h1>
+            
+            <form class="form" [formGroup]="this.loginForm">
+        
+                <div class="mt-2">
+            
+                    <mat-form-field class="w-100">
+                
+                        <mat-label>Usuario</mat-label>
+                        <input type="text" matInput  formControlName="usernameForm">
+                        <mat-error  *ngIf=" this.userInvalid">El usuario es requerido.</mat-error>
+                    </mat-form-field>
+                </div>
+            
+                <div class="mt-2">
+                    <mat-form-field class="w-100">
+                
+                        <mat-label>Contraseña</mat-label>
+                        <input  matInput  formControlName="passwordForm"
+                        [type]="showPassword ? 'text' : 'password'"
+                        >
+                        <mat-icon  matSuffix (click)="togglePasswordVisibilty()">
+                            {{ showPassword ? 'visibility_off' : 'visibility' }}
+                        </mat-icon>
+                        <mat-error  *ngIf=" this.passwordInvalid">La contraseña es requerid1.</mat-error>
+                    </mat-form-field>
+            
+                </div>
+        
+                <div  class="d-flex justify-content-center mt-3">
+                    <button class="btn btn-primary w-100  btn-bg" (click)="login()" >Entrar</button>
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+
+
+    <div class=" container-circle">
+        <div class="circle-1"></div>
+    </div>
+    <div class="container-circle-2">
+        <div class="circle-2"></div>
+    </div>
+    
+</div>
