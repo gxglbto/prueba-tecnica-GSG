@@ -22,7 +22,6 @@ export class CambioLetrasPipe implements PipeTransform {
     });
 
 
-    console.log( phrase );
     
 
     return phrase.join("")

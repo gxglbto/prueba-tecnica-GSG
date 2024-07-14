@@ -45,8 +45,7 @@ export class WelcomeComponent implements OnInit {
     } )
 
     MODALSAVE.afterClosed().subscribe( resp=>{
-      console.log( resp );
-
+      
       if( resp == "Aceptar" ){
 
         this.viewName = true;
@@ -61,7 +60,6 @@ export class WelcomeComponent implements OnInit {
         this.viewName = true;
       }
 
-      console.log( this.textoDeInput );
       
       
       

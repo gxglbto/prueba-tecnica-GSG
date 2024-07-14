@@ -49,7 +49,6 @@ export class CalculateDateComponent implements OnInit {
   }
 
   onlyNumber(event:any){
-    console.log( event.keyCode );
     
     if( event.keyCode >= 48 && event.keyCode <= 57 || (event.keyCode == 8) ){
 
@@ -94,7 +93,6 @@ export class CalculateDateComponent implements OnInit {
       case 'D': day   += Number(quantityForm); break;
     }
     
-    console.log( new Date( year, month, day ) );
 
     this.dateFinish = new Date( year, month, day );
   

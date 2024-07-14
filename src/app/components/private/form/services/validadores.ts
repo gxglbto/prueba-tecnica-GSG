@@ -18,19 +18,16 @@ export class Validadores {
         
 
         if(textoWithoutSpace == null) {
-            console.log( 'el texto es null' );
             
             return null
         }
         if( control.value !== textoWithoutSpace.trim()){
-            console.log( 'segungo if' );
             
             return {
                 withoutSpaceToFinish:true
             };
         }else{
 
-            console.log('else null');
             
             return null;
         }

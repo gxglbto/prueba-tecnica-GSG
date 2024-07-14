@@ -54,7 +54,6 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    console.log( this.loginForm );
     
     if( this.loginForm.invalid ){
       return Object.values( this.loginForm.controls ).forEach( ( control:any )=>{
@@ -74,35 +73,30 @@ export class LoginComponent implements OnInit {
   // consumo de servicios
   postLoginSrv( bodyRequest:BodyRequest ){
 
-    console.log( bodyRequest );
     
     const SPINNER = this.matDialog.open( SpinnerComponent, { data:{ message:'Cargando. . .' } } )
 
     this.loginSrv.postLogin( bodyRequest )
       .subscribe( ( respLogin :any ) =>{
-        console.log( respLogin );
+        
         SPINNER.close();
         if( respLogin.exito ){
-          // this.modalRespService( respLogin.mensaje )
-          // localStorage.setItem('token','');
-          console.log( 'si logea' );
+          
           this.router.navigate(["bienvenido"]);
           localStorage.setItem("login", "true");
 
         }else{
 
-          this.modalRespService( `Ocurrio un error en el servicio: ${ respLogin.mensaje }` )
+          this.modalRespService( `${ respLogin.mensaje }` )
 
         }
       }, err =>{
         SPINNER.close()
-        console.log( err );
         
-        this.router.navigate(["bienvenido"]);
-          localStorage.setItem("login", "true");
-        // this.modalRespService( `Ocurrio un error en el servicio: ${ err.message }` )
+        // this.router.navigate(["bienvenido"]);
+        //   localStorage.setItem("login", "true");
+        this.modalRespService( `Ocurrio un error en el servicio: ${ err.message }` )
       })
-      // carlos.oviedo, $oyAdmin666
   }
 
   modalRespService( message:string ){

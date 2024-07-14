@@ -16,8 +16,6 @@ export class LoginService {
 
   postLogin( bodyRequest: BodyRequest ){
 
-    console.log( bodyRequest );
-    
 
     return this.http.post( `${ environment.urlSrv }/login`, bodyRequest )
   }

@@ -149,16 +149,13 @@ export class FormComponent implements OnInit {
     
 
     if( this.reactiveForm.get( nameControl )?.errors == null ){
-      // return true;
       return false;
     }
     else if( this.reactiveForm.get( nameControl )?.value =='' ||  this.reactiveForm.get( nameControl )?.value == null){
-      // return true;
       return false;
     }
     else if(this.reactiveForm.get( nameControl )?.errors !== null ){
 
-      console.log( 'entra en el !=null' );
       
       return true;
     }
@@ -203,7 +200,7 @@ export class FormComponent implements OnInit {
   }
 
   submitForm(){
-    console.log( this.reactiveForm );
+    
 
 
     if( this.reactiveForm.invalid ){
@@ -258,7 +255,6 @@ export class FormComponent implements OnInit {
 
   postForm(){
     
-    console.log( this.reactiveForm );
 
     const FORMVALUE = this.reactiveForm.value;
     
@@ -272,7 +268,6 @@ export class FormComponent implements OnInit {
       estadoCivil : FORMVALUE.estadoCivil,
     }
 
-    console.log( BODYREQ );
     
   }
 
